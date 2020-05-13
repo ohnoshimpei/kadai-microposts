@@ -4,6 +4,7 @@
     @if (Auth::check())
         <div class="row">
             <aside class="col-sm-4">
+                @include('users.card', ['user' => Auth::user()])
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">{{ Auth::user()->name }}</h3>
